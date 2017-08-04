@@ -20,4 +20,4 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 #run command
-CMD ["python", "manage.py", "runserver"]
+CMD ["python", "server.py", "runserver"]

@@ -37,18 +37,18 @@ def sms():
         # Thats it, hit send and we'll take care of the rest.
         
         results = gateway.sendMessage(to, message)
-        message = "Succes"
+        message = ""
         for recipient in results:
             # status is either "Success" or "error message"
-            print 'number=%s;status=%s;messageId=%s;cost=%s' % (recipient['number'],
+            message +=  'number=%s;status=%s;messageId=%s;cost=%s' % (recipient['number'],
                                                                 recipient['status'],
                                                                 recipient['messageId'],
                                                                 recipient['cost'])
                             
     except AfricasTalkingGatewayException, e:
-        message = "Fail"
-        print 'Encountered an error while sending: %s' % str(e)
+        message =  'Encountered an error while sending: %s' % str(e)
 
     return message
+
 if __name__ == '__main__':
     app.run(debug=True)
