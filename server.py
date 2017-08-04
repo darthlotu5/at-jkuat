@@ -8,14 +8,14 @@ app = Flask(__name__)
 @app.route("/sms")
 def sms():
     # Specify your login credentials
-    username = "Nyongesa"
-    apikey   = '445c171832b1631a7570fd4961cea4e18fc7747cf4a8d80a12a85c79b04c38f6'
+    username = "your username"
+    apikey   = 'your api key'
     
     # NOTE: If connecting to the sandbox, please use your sandbox login credentials
     # Specify the numbers that you want to send to in a comma-separated list
     # Please ensure you include the country code (+254 for Kenya)
 
-    to= "+254703554404"
+    to= "+XXXXXXXXXXX, +XXXXXXXXXXX"
 
     # And of course we want our recipients to know what we really do
 
